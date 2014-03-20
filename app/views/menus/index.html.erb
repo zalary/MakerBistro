@@ -1,0 +1,7 @@
+<% @menus.each do |menu| %>
+  Name: <%= menu.name %>,
+  Price: <%= menu.price %>,
+  Ingredients: <% menu.ingredients.each do |i| %>
+    <%= i.name %>,
+  <% end %>
+<% end %>

@@ -1,4 +1,10 @@
 MakerBistro::Application.routes.draw do
+    root 'menus#index'
+
+    resources :menus
+    resources :ingredients
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
