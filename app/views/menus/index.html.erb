@@ -2,6 +2,7 @@
   Name: <%= menu.name %>,
   Price: <%= menu.price %>,
   Ingredients: <% menu.ingredients.each do |i| %>
-    <%= i.name %>,
-  <% end %>
+    <%= i.name %>
+  <% end %><br/>
+  <%= link_to 'Ingredients', new_menu_ingredient_url(menu.id) %>
 <% end %>

@@ -12,6 +12,12 @@ class MenusController < ApplicationController
     @menu = Menu.new
   end
 
+  def create
+    @menu = Menu.new(menu_params)
+    @menu.save
+    redirect_to root_path
+  end
+
   def edit
     @menu = Menu.find(params[:id])
   end
@@ -22,5 +28,12 @@ class MenusController < ApplicationController
 
   def destroy
     @menu = Menu.find(params[:id])
+  end
+
+
+  private
+
+  def menu_params
+    params.require(:menu).permit(:name, :price)
   end
 end

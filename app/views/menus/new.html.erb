@@ -1,1 +1,9 @@
-<%= form_for @menus,  %>
+
+<%= form_for(@menu) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br />
+  <%= f.label :price %>
+  <%= f.text_field :price %><br />
+  <%= submit_tag("submit") %>
+<% end %>
+

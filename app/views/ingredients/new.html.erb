@@ -1,0 +1,5 @@
+<%= form_for([@menu, @ingredient], url: menu_ingredients_path) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br />
+  <%= submit_tag("submit") %>
+<% end %>
