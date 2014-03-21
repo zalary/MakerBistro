@@ -12,7 +12,7 @@ class IngredientsController < ApplicationController
   def create
     @menu = Menu.find(params[:menu_id])
     @ingredients = @menu.ingredients.create(ingredients_params)
-    @ingredients.save
+    # @ingredients.save
     redirect_to root_path
   end
 

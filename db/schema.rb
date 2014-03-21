@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20140320150323) do
   add_index "ingredients_menus", ["ingredients_id"], name: "index_ingredients_menus_on_ingredients_id"
   add_index "ingredients_menus", ["menu_id"], name: "index_ingredients_menus_on_menu_id"
 
-  create_table "menus", force: true do |t|
+  create_table "menu_items", force: true do |t|
     t.string   "name"
     t.integer  "price"
     t.datetime "created_at"

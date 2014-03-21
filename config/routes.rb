@@ -1,7 +1,7 @@
 MakerBistro::Application.routes.draw do
-    root 'menus#index'
+    root 'menu_items#index'
 
-    resources :menus do
+    resources :menu_items do
       resources :ingredients
     end
 

@@ -1,6 +1,6 @@
 class CreateMenus < ActiveRecord::Migration
   def change
-    create_table :menus do |t|
+    create_table :menu_items do |t|
       t.string :name
       t.integer :price
 
