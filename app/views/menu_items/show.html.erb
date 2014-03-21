@@ -1,0 +1,8 @@
+<h3><%=  @menu_item.name %> &nbsp; $<%= @menu_item.price %>.00 </h3>
+<h4>Ingredients:</h4>
+<ul><% @menu_item.ingredients.each do |ingredient| %>
+  <li>  <%= "#{ingredient.name}" %> </li>
+<% end %>
+  </ul>
+
+

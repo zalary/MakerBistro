@@ -2,12 +2,13 @@
 <% @menu_items.each do |menu_item| %>
   Name: <%= menu_item.name %>,
   Price: <%= menu_item.price %>,
-  Ingredients: <% menu_item.ingredient.each do |i| %>
+  Ingredients: <% menu_item.ingredients.each do |i| %>
     <%= i.name %>
-  <% end %>  
-  <%= link_to 'Add ingredients', new_menu_item_ingredient_url(menu_item.id) %><br/>
-  <%= link_to 'Edit menu item', edit_menu_item_url(menu_item) %><br/>
-  <%= link_to 'Delete menu item', menu_item, method: :delete, data: { confirm: 'Are you sure?' } %><br/>
+  <% end %>
+  (<%= link_to 'Add ingredient', new_menu_item_ingredient_url(menu_item.id) %>)
+  (<%= link_to 'Edit', edit_menu_item_url(menu_item) %>)
+  <%= link_to 'Delete', menu_item, method: :delete, data: { confirm: 'Are you sure?' } %><br/>
 <% end %>
 
+<br />
 <%= link_to 'Add a new menu item', new_menu_item_path %><br/>

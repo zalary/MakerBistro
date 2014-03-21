@@ -1,5 +1,4 @@
-<%= form_for([@menu, @ingredient], url: menu_ingredient_path) do |f| %>
-  <% require 'pry'; binding.pry %>
+<%= form_for([@menu_item, @ingredient], url: menu_item_ingredients_path) do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %><br />
   <%= submit_tag("submit") %>
