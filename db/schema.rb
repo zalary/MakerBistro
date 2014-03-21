@@ -11,23 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140320150323) do
+ActiveRecord::Schema.define(version: 20140321152624) do
+
+  create_table "ingredient_menus", force: true do |t|
+    t.integer  "menu_item_id"
+    t.integer  "ingredient_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "ingredient_menus", ["ingredient_id"], name: "index_ingredient_menus_on_ingredient_id"
+  add_index "ingredient_menus", ["menu_item_id"], name: "index_ingredient_menus_on_menu_item_id"
 
   create_table "ingredients", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  create_table "ingredients_menus", force: true do |t|
-    t.integer  "ingredients_id"
-    t.integer  "menu_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "ingredients_menus", ["ingredients_id"], name: "index_ingredients_menus_on_ingredients_id"
-  add_index "ingredients_menus", ["menu_id"], name: "index_ingredients_menus_on_menu_id"
 
   create_table "menu_items", force: true do |t|
     t.string   "name"
